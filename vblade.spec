@@ -20,11 +20,16 @@ vblade lets you export any block storage device as a AoE device
 %prep
 %setup -q
 
+%build
+make
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_sbindir}
+install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
 install vbladed $RPM_BUILD_ROOT%{_sbindir}
+install vblade $RPM_BUILD_ROOT%{_sbindir}
+install vblade.8 $RPM_BUILD_ROOT%{_mandir}/man8/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -32,3 +37,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_sbindir}/vbladed
+%attr(755,root,root) %{_sbindir}/vblade
+%{_mandir}/man8/*
