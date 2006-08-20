@@ -1,12 +1,8 @@
-#
-# TODO:
-#		- add devices to static-dev
-#		- vblade
-#
 Summary:	vblade, virtual EtherDrive blade
+Summary(pl):	vblade - wirtualny blade EtherDrive
 Name:		vblade
 Version:	10
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		Base/Utilities
 Source0:	http://dl.sourceforge.net/aoetools/%{name}-%{version}.tar.gz
@@ -15,21 +11,27 @@ URL:		http://aoetools.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-vblade lets you export any block storage device as a AoE device
+vblade lets you export any block storage device as a AoE device.
+
+%description -l pl
+vblade pozwala eksportowaæ dowolne urz±dzenie blokowe przechowuj±ce
+dane jako urz±dzenie AoE.
 
 %prep
 %setup -q
 
 %build
-make
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
+
 install vbladed $RPM_BUILD_ROOT%{_sbindir}
 install vblade $RPM_BUILD_ROOT%{_sbindir}
-install vblade.8 $RPM_BUILD_ROOT%{_mandir}/man8/
+install vblade.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
 %clean
 rm -rf $RPM_BUILD_ROOT
