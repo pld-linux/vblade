@@ -1,5 +1,5 @@
 Summary:	vblade, virtual EtherDrive blade
-Summary(pl):	vblade - wirtualny blade EtherDrive
+Summary(pl.UTF-8):   vblade - wirtualny blade EtherDrive
 Name:		vblade
 Version:	13
 Release:	1
@@ -13,9 +13,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 vblade lets you export any block storage device as a AoE device.
 
-%description -l pl
-vblade pozwala eksportowaæ dowolne urz±dzenie blokowe przechowuj±ce
-dane jako urz±dzenie AoE.
+%description -l pl.UTF-8
+vblade pozwala eksportowaÄ‡ dowolne urzÄ…dzenie blokowe przechowujÄ…ce
+dane jako urzÄ…dzenie AoE.
 
 %prep
 %setup -q
