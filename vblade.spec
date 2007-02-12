@@ -1,5 +1,5 @@
 Summary:	vblade, virtual EtherDrive blade
-Summary(pl.UTF-8):   vblade - wirtualny blade EtherDrive
+Summary(pl.UTF-8):	vblade - wirtualny blade EtherDrive
 Name:		vblade
 Version:	13
 Release:	1
