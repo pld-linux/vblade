@@ -1,12 +1,12 @@
 Summary:	vblade, virtual EtherDrive blade
 Summary(pl.UTF-8):	vblade - wirtualny blade EtherDrive
 Name:		vblade
-Version:	19
+Version:	20
 Release:	1
 License:	GPL v2
 Group:		Base/Utilities
 Source0:	http://dl.sourceforge.net/aoetools/%{name}-%{version}.tgz
-# Source0-md5:	59d45caa6454388eea60441dcf6631db
+# Source0-md5:	3c80e4a6bc7d66ae0c235b88cb44bd59
 URL:		http://aoetools.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
